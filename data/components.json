@@ -29,9 +29,9 @@
   ],
 
   "sirens": [
-    { "name": "ОС", "img": "assets/sirens/oc.png", "normal": 0, "alarm": 35, "type": "Сирена", "note": "2 шт на 1 реле" },
-    { "name": "ОС Ex", "img": "assets/sirens/oc ex.png", "normal": 0, "alarm": 35, "type": "Сирена", "note": "2 шт на 1 реле" },
-    { "name": "ОСЗ", "img": "assets/sirens/ocz.png", "normal": 0, "alarm": 70, "type": "Сирена", "note": "2 шт на 1 реле" },
+    { "name": "ОС", "img": "assets/sirens/OC.png", "normal": 0, "alarm": 35, "type": "Сирена", "note": "2 шт на 1 реле" },
+    { "name": "ОС Ex", "img": "assets/sirens/OC Ex.png", "normal": 0, "alarm": 35, "type": "Сирена", "note": "2 шт на 1 реле" },
+    { "name": "ОСЗ", "img": "assets/sirens/OCZ.png", "normal": 0, "alarm": 70, "type": "Сирена", "note": "2 шт на 1 реле" },
     { "name": "Джміль", "img": "assets/sirens/dzhmil.png", "normal": 0, "alarm": 70, "type": "Сирена", "note": "2 шт на 1 реле" },
     { "name": "Джміль-1", "img": "assets/sirens/dzhmil-1.png", "normal": 0, "alarm": 70, "type": "Сирена", "note": "2 шт на 1 реле" },
     { "name": "Джміль-2", "img": "assets/sirens/dzhmil-1.png", "normal": 0, "alarm": 200, "type": "Сирена", "note": "2 шт на 1 реле" }
