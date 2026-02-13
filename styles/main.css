@@ -1,0 +1,282 @@
+:root {
+  --bg: #000;
+  --fg: #fff;
+  --green: #ff0000;
+  --green2: #c80000;
+  --panel: #0c0c0c;
+  --line: #1b1b1b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Neue Machina";
+  src: url("../assets/fonts/neu_machina/NeueMachina-Regular.woff2") format("woff2"),
+       url("../assets/fonts/neu_machina/NeueMachina-Regular.woff") format("woff"),
+       url("../assets/fonts/neu_machina/NeueMachina-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Neue Machina", sans-serif;
+  min-height: 100vh;
+}
+
+/* TIRAS Header Styles */
+.tiras-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #000000;
+}
+
+.tiras-top {
+  width: 100%;
+  height: 88px;
+  align-content: center;
+  background: #000;
+  padding: 22px 80px;
+}
+
+.tiras-logo {
+  width: 124px;
+  height: 24px;
+  border-top-width: 5px;
+  margin-top: 10px;
+  margin-left: 1px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.tiras-back {
+  background: #000000;
+  padding: 9px 80px;
+  border-bottom: 1px solid #111;
+}
+
+.tiras-back-link {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.tiras-back-link:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* Home Container */
+.home-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 40px 20px;
+}
+
+.hero-title {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  margin: 0 0 16px;
+  background: linear-gradient(135deg, var(--green), var(--green2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: clamp(16px, 2vw, 20px);
+  color: #ccc;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Devices Grid */
+.devices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.device-card {
+  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 32px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.device-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 0, 0, 0.1), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.device-card:hover::before {
+  opacity: 1;
+}
+
+.device-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--green);
+  box-shadow: 0 8px 32px rgba(255, 0, 0, 0.2);
+}
+
+.device-icon {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: rgba(12, 12, 12, 0.6);
+  border: 1px solid var(--line);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.device-icon-image {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: rgba(12, 12, 12, 0.6);
+  border: 1px solid var(--line);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.device-board-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.lte-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: radial-gradient(circle at 30% 30%, var(--green), var(--green2));
+  color: #000;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+}
+
+.device-name {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.device-description {
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.device-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(255, 0, 0, 0.15);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tiras-top,
+  .tiras-back {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .devices-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    margin-bottom: 40px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .device-card {
+    padding: 24px 16px;
+  }
+
+  .device-icon,
+  .device-icon-image {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* Fire badge for PRIME XL */
+.fire-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: radial-gradient(circle at 30% 30%, #ff3333, #cc0000);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 0 12px rgba(255, 51, 51, 0.6);
+}
+
+/* Device specs */
+.device-specs {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green);
+  text-align: center;
+  margin: 8px 0;
+  position: relative;
+  z-index: 1;
+}
