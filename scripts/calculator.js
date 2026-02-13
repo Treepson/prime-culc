@@ -626,7 +626,7 @@
         modulsBtn.classList.remove("free");
         modulsBtn.classList.add("occupied");
         modulsBtn.title = "M-OUT2R (зайнято)";
-        modulsBtn.textContent = "✓";
+        modulsBtn.textContent = "+";
       } else {
         modulsBtn.classList.remove("occupied");
         modulsBtn.classList.add("free");
