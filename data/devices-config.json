@@ -1,0 +1,113 @@
+{
+  "devices": [
+    {
+      "id": "prime-s",
+      "name": "TIRAS PRIME S",
+      "title": "Калькулятор ємності АКБ • TIRAS PRIME S",
+      "backLink": "../index.html",
+      "boardImage": "assets/boards/prime-s.png",
+      "hotspots": {
+        "mod1": { "left": "45%", "top": "5.9%" },
+        "mod2": { "left": "56.7%", "top": "5.9%" },
+        "moduls": { "left": "51.2%", "top": "29.3%" },
+        "sens": { "left": "31.7%", "top": "29.3%" },
+        "sir": { "left": "68%", "top": "29.3%" },
+        "sir2": { "left": "72.9%", "top": "29.3%" },
+        "additional": { "left": "60.6%", "top": "29.3%" }
+      },
+      "baseDevice": {
+        "name": "TIRAS PRIME S",
+        "modes": {
+          "normal": { "label": "Звичайний", "current": 80 },
+          "detecto": { "label": "Detecto+", "current": 70 }
+        },
+        "alarmCurrent": 140
+      },
+      "maxLoops": 4,
+      "hasModSlot2": true,
+      "supportsExtenders": false
+    },
+    {
+      "id": "prime-m",
+      "name": "TIRAS PRIME M",
+      "title": "Калькулятор ємності АКБ • TIRAS PRIME M",
+      "backLink": "../index.html",
+      "boardImage": "assets/boards/prime-m.png",
+      "hotspots": {
+        "mod1": { "left": "45%", "top": "5.9%" },
+        "mod2": { "left": "56.7%", "top": "5.9%" },
+        "moduls": { "left": "51.2%", "top": "29.3%" },
+        "sens": { "left": "31.7%", "top": "29.3%" },
+        "sir": { "left": "68%", "top": "29.3%" },
+        "sir2": { "left": "72.9%", "top": "29.3%" },
+        "additional": { "left": "60.6%", "top": "29.3%" }
+      },
+      "baseDevice": {
+        "name": "TIRAS PRIME M",
+        "modes": {
+          "normal": { "label": "Звичайний", "current": 100 },
+          "detecto": { "label": "Detecto+", "current": 80 }
+        },
+        "alarmCurrent": 170
+      },
+      "maxLoops": 8,
+      "hasModSlot2": true,
+      "supportsExtenders": false
+    },
+      {
+      "id" : "prime-l",
+      "name": "TIRAS PRIME L",
+      "title": "Калькулятор ємності АКБ • TIRAS PRIME L",
+      "backLink": "../index.html",
+      "boardImage": "assets/boards/prime-l.png",
+      "hotspots": {
+        "mod1": { "left": "35.7%", "top": "31.9%" },
+        "mod2": { "left": "0%", "top": "0%" },
+        "moduls": { "left": "53.7%", "top": "21%" },
+        "sens": { "left": "35.7%", "top": "21%" },
+        "sir": { "left": "59.6%", "top": "21%" },
+        "sir2": { "left": "63%", "top": "21%" },
+        "additional": { "left": "69.5%", "top": "21%" }
+      },
+      "baseDevice": {
+        "name": "TIRAS PRIME L",
+        "modes": {
+          "normal": { "label": "Звичайний", "current": 50 },
+          "detecto": { "label": "Detecto+", "current": 30 }
+        },
+        "alarmCurrent": 60
+      },
+      "maxLoops": 16,
+      "hasModSlot2": false,
+      "supportsExtenders": false
+    },
+    {
+      "id": "prime-xl",
+      "name": "TIRAS PRIME XL",
+      "title": "Калькулятор ємності АКБ • TIRAS PRIME XL",
+      "backLink": "../index.html",
+      "boardImage": "assets/boards/prime-xl.png",
+      "hotspots": {
+        "mod1": { "left": "35.7%", "top": "31.9%" },
+        "mod2": { "left": "0%", "top": "0%" },
+        "moduls": { "left": "53.7%", "top": "21%" },
+        "sens": { "left": "35.7%", "top": "21%" },
+        "sir": { "left": "59.6%", "top": "21%" },
+        "sir2": { "left": "63%", "top": "21%" },
+        "additional": { "left": "69.5%", "top": "21%" }
+      },
+      "baseDevice": {
+        "name": "TIRAS PRIME XL",
+        "modes": {
+          "normal": { "label": "Звичайний", "current": 50 },
+          "detecto": { "label": "Detecto+", "current": 30 }
+        },
+        "alarmCurrent": 60
+      },
+      "maxLoops": 16,
+      "baseLoops": 16,
+      "hasModSlot2": false,
+      "supportsExtenders": true
+    }
+  ]
+}

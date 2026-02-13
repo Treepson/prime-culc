@@ -1,0 +1,68 @@
+{
+  "modulesInner": [
+    { "name": "M-2G", "img": "assets/modules/M-2G.png", "normal": 25, "alarm": 50, "type": "Комунікатор" },
+    { "name": "M-LTE", "img": "assets/modules/M-LTE.png", "normal": 25, "alarm": 50, "type": "Комунікатор" },
+    { "name": "M-OUT2R", "img": "assets/modules/M-OUT2R.png", "normal": 40, "alarm": 40, "type": "Модуль" },
+    { "name": "M-WiFi", "img": "assets/modules/M-WiFi.png", "normal": 50, "alarm": 50, "type": "Комунікатор" },
+    { "name": "M-NET+", "img": "assets/modules/M-NET+.png", "normal": 80, "alarm": 80, "type": "Комунікатор" }
+  ],
+
+  "exmodules": {
+    "Розширювачі виходів": [
+      { "name": "M-OUT2R box", "img": "assets/modules/M-OUT2R box.png", "normal": 30, "alarm": 100, "type": "Модуль" },
+      { "name": "M-OUT8R", "img": "assets/modules/M-OUT8R.png", "normal": 15, "alarm": 180, "type": "Модуль" }
+    ]
+  },
+
+  "modulesExt": [
+    { "name": "MZ-P fBox", "img": "assets/modules/MZ-P fBox.png", "normal": 80, "alarm": 80, "addLoops": 8,"type": "Модуль" }
+  ],
+
+  "sensors": [
+    { "name": "Detecto SMK10", "img": "assets/sensors/SMK 10.webp", "normal": 0.11, "alarm": 15, "type": "Датчик" },
+    { "name": "Detecto SMK10 Ex", "img": "assets/sensors/SMK 10Ex.webp", "normal": 0.11, "alarm": 15, "type": "Датчик" },
+    { "name": "Detecto HT10", "img": "assets/sensors/HT 10.webp", "normal": 0.10, "alarm": 15, "type": "Датчик" },
+    { "name": "Detecto HT10 Ex", "img": "assets/sensors/HT 10Ex.webp", "normal": 0.10, "alarm": 15, "type": "Датчик" },
+    { "name": "СПР Тірас", "img": "assets/sensors/SPR.png", "normal": 0.10, "alarm": 15, "type": "Датчик" },
+    { "name": "СПР Тірас Ех", "img": "assets/sensors/SPR Ex.png", "normal": 0.10, "alarm": 15, "type": "Датчик" },
+    { "name": "Detecto MLT10", "img": "assets/sensors/MLT 10.png", "normal": 0.12, "alarm": 15, "type": "Датчик" }
+  ],
+
+  "sirens": [
+    { "name": "ОС", "img": "assets/sirens/oc.png", "normal": 0, "alarm": 35, "type": "Сирена", "note": "2 шт на 1 реле" },
+    { "name": "ОС Ex", "img": "assets/sirens/oc ex.png", "normal": 0, "alarm": 35, "type": "Сирена", "note": "2 шт на 1 реле" },
+    { "name": "ОСЗ", "img": "assets/sirens/ocz.png", "normal": 0, "alarm": 70, "type": "Сирена", "note": "2 шт на 1 реле" },
+    { "name": "Джміль", "img": "assets/sirens/dzhmil.png", "normal": 0, "alarm": 70, "type": "Сирена", "note": "2 шт на 1 реле" },
+    { "name": "Джміль-1", "img": "assets/sirens/dzhmil-1.png", "normal": 0, "alarm": 70, "type": "Сирена", "note": "2 шт на 1 реле" },
+    { "name": "Джміль-2", "img": "assets/sirens/dzhmil-1.png", "normal": 0, "alarm": 200, "type": "Сирена", "note": "2 шт на 1 реле" }
+  ],
+
+  "additional_equipment": [
+    { "name": "MRL-2.1 box", "img": "assets/modules/MRL-2_1 box.png", "normal": 60, "alarm": 60, "type": "Інше" },
+    { "name": "Аварійне освітлення", "img": "assets/sirens/emergency lighting.png", "normal": 70, "alarm": 70, "type": "Інше", "note": "2 шт" }
+  ],
+
+  "extHotspots": {
+    "MZ-P fBox": {
+      "moduls": { "left": 56.6, "top": 16 },
+      "sens": { "left": 45, "top": 22 },
+      "sir": { "left": 58, "top": 37.5 },
+      "sir2": { "left": 64.6, "top": 37.5 }
+    }
+  },
+
+  "slotLimits": {
+    "M-OUT2R": 2,
+    "M-LTE": 1,
+    "M-2G": 1,
+    "M-WiFi": 1,
+    "M-NET+": 1
+  },
+
+  "moduleConflicts": {
+    "M-WiFi": ["M-NET+"],
+    "M-NET+": ["M-WiFi"],
+    "M-2G": ["M-LTE"],
+    "M-LTE": ["M-2G"]
+  }
+}
