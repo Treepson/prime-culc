@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title id="pageTitle">Калькулятор АКБ • PRIME</title>
+  <link rel="stylesheet" href="../styles/calculator.css">
+</head>
+<body>
+  <header class="tiras-header">
+    <div class="tiras-back">
+      <a href="#" id="backLink" class="tiras-back-link">
+        ← Повернутися назад до вибору приладу
+      </a>
+    </div>
+  </header>
+
+  <header class="top-header">
+    <h1 id="deviceTitle">Калькулятор ємності АКБ</h1>
+    <p class="subtitle">Натисніть на «+» на платі, щоб додати комунікатори, модулі, датчики або сирени.</p>
+  </header>
+
+  <div class="device-tabs">
+    <div id="deviceTabs" class="device-tabs-inner">
+      <div id="device-type-switch" data-visible="false">
+        <button class="dev-tab-btn active" data-device-tab="main">ППКП</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="extPages" class="ext-pages" style="display:none;"></div>
+
+  <main class="stage">
+    <div class="board-wrap" id="boardWrap">
+      <img src="" class="board" alt="" id="boardImage">
+      <!-- Hotspots will be generated dynamically -->
+    </div>
+
+    <section class="table-wrap">
+      <div class="table-actions">
+        <button id="clearAll" class="btn">Очистити все</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Тип</th>
+            <th>Назва</th>
+            <th>Черговий режим (мА)</th>
+            <th>Режим пожежі (мА)</th>
+            <th>Кількість</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </section>
+
+    <section class="capacity">
+      <div class="row">
+        <label>Σ Споживання в черговому режимі:</label>
+        <span><span id="sumNorm">—</span> мА</span>
+      </div>
+      <div class="row">
+        <label>Σ Споживання в режимі пожежі:</label>
+        <span><span id="sumAlarm">—</span> мА</span>
+      </div>
+      <div class="row">
+        <label>Режим роботи приладу:</label>
+        <select id="deviceMode">
+          <option value="normal" selected>Звичайний</option>
+          <option value="detecto">Detecto+</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="loops">Кількість ШС:</label>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <input type="number" id="loops" value="1" min="0">
+          <span id="loopsInfo" style="font-size: 12px; color: #00ff66;"></span>
+        </div>
+      </div>
+      <div class="row">
+        <label>Час роботи:</label>
+        <select id="hours">
+          <option value="30" selected>30 годин</option>
+          <option value="72">72 години</option>
+        </select>
+      </div>
+      <div class="row">
+        <label>Коефіцієнт запасу:</label>
+        <span>25%</span>
+      </div>
+      <div class="row">
+        <label>Розрахункова ємність 2х АКБ:</label>
+        <span><span id="capacity">—</span> А·год (кожного)</span>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modal">
+    <div class="sheet">
+      <button class="close-x" id="closeModal">×</button>
+      <h3 id="modalTitle">Додати</h3>
+
+      <div id="generic-body" class="tab-body active"></div>
+    </div>
+  </div>
+
+  <script src="../scripts/calculator.js"></script>
+</body>
+</html>
