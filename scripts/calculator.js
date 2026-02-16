@@ -881,7 +881,7 @@
         btn.classList.remove("free");
         btn.classList.add("occupied");
         btn.title = slot.name;
-        btn.textContent = "•";
+        btn.textContent = "+";
       } else {
         btn.classList.remove("occupied");
         btn.classList.add("free");
